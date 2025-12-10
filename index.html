@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Inovasi Perkotaan & Teknologi</title>
+    <!-- Memuat Tailwind CSS dari CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* Mengatur font Inter sebagai font utama */
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Latar belakang sangat gelap agar teks putih kontras */
+            background-color: #0d1117; 
+        }
+        /* Style untuk Hero Section dengan overlay gelap */
+        .hero-section {
+            background-image: url('https://placehold.co/1200x800/222222/FFFFFF?text=Kota+Malam+dengan+Banyak+Orang');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-overlay {
+            background-color: rgba(0, 0, 0, 0.7); /* Overlay gelap agar teks putih mudah dibaca */
+        }
+        .section-title {
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            width: 50px;
+            height: 3px;
+            background-color: #ffffff; /* Garis bawah putih untuk judul */
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body class="text-white">
+
+    <!-- 1. Header dan Navigasi -->
+    <header class="sticky top-0 z-50 bg-gray-900 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wider text-white">Wildan Eka</h1>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#home" class="hover:text-cyan-400 transition duration-300">Beranda</a>
+                <a href="#teknologi" class="hover:text-cyan-400 transition duration-300">Teknologi</a>
+                <a href="#proyek" class="hover:text-cyan-400 transition duration-300">Proyek Kota</a>
+                <a href="#kontak" class="hover:text-cyan-400 transition duration-300">Kontak</a>
+            </nav>
+            <button id="menu-button" class="md:hidden p-2 rounded-md hover:bg-gray-700 transition duration-300">
+                <!-- Ikon Menu (Lucide-react fallback using SVG) -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-800 border-t border-gray-700">
+            <a href="#home" class="block py-2 px-4 hover:bg-gray-700 transition duration-300">Beranda</a>
+            <a href="#teknologi" class="block py-2 px-4 hover:bg-gray-700 transition duration-300">Teknologi</a>
+            <a href="#proyek" class="block py-2 px-4 hover:bg-gray-700 transition duration-300">Proyek Kota</a>
+            <a href="#kontak" class="block py-2 px-4 hover:bg-gray-700 transition duration-300">Kontak</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- 2. Hero Section - Kota & Bangunan (Visual Utama) -->
+        <section id="home" class="hero-section min-h-screen flex items-center justify-center p-4">
+            <div class="hero-overlay absolute inset-0"></div>
+            <div class="relative z-10 text-center max-w-4xl p-6 md:p-12 rounded-xl">
+                <p class="text-xl text-cyan-400 mb-4 font-medium tracking-widest">SELAMAT DATANG DI ERA URBANISASI DIGITAL</p>
+                <h2 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight">
+                    MENGHUBUNGKAN <span class="text-cyan-400">TEKNOLOGI</span> DAN ARSITEKTUR MASA DEPAN
+                </h2>
+                <p class="text-lg sm:text-xl text-gray-300 mb-8">
+                    Jelajahi bagaimana inovasi mengubah gedung pencakar langit, infrastruktur kota, dan kehidupan jutaan orang.
+                </p>
+                <a href="#teknologi" class="inline-block px-8 py-3 bg-cyan-600 hover:bg-cyan-700 text-white font-bold rounded-full transition duration-300 shadow-lg transform hover:scale-105">
+                    Mulai Eksplorasi
+                </a>
+            </div>
+        </section>
+
+        <!-- 3. Tentang Wildan Eka/ Pengantar -->
+        <section id="tentang" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title mb-10 pb-2">
+                <h3 class="text-3xl font-bold">Tentang Teknolgi</h3>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img src="https://placehold.co/400x400/1e293b/ffffff?text=Wajah+Pengembang" alt="Profil Saya" class="rounded-xl w-3/4 mx-auto shadow-2xl border-4 border-cyan-400/50">
+                </div>
+                <div class="space-y-6 text-gray-300">
+                    <p class="text-lg">
+                        Saya [Wildan Eka], seorang pelajar yang bersemangat dalam menggabungkan ilmu teknik dengan potensi tak terbatas dari dunia digital. Saya percaya bahwa tantangan terbesar di abad ke-21 adalah membangun <span class="text-cyan-400 font-semibold">Kota Tempest (Tempest City)</span> yang efisien, berkelanjutan, dan inklusif.
+                    </p>
+                    <p>
+                        Portofolio ini menampilkan pemahaman dan proyek saya terkait infrastruktur digital, Big Data, dan solusi IoT yang dirancang untuk meningkatkan kualitas hidup perkotaan, mulai dari manajemen lalu lintas hingga efisiensi energi bangunan.
+                    </p>
+                    <p class="text-sm italic">
+                        "Bangunan adalah masa lalu, data adalah masa depan."
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Teknologi & Konsep Inti (Fokus pada Teknologi & Kota) -->
+        <section id="teknologi" class="py-16 md:py-24 bg-gray-800">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="section-title mb-12 pb-2">
+                    <h3 class="text-3xl font-bold">Teknologi Pendorong Perkotaan</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Kartu 1: IoT -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-2xl border-t-4 border-cyan-500 hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                        <h4 class="text-xl font-bold mb-3 text-cyan-400">Internet of Things (IoT)</h4>
+                        <p class="text-gray-400">
+                            Penggunaan sensor di seluruh bangunan dan infrastruktur (jembatan, jalan) untuk memantau kondisi *real-time*, memprediksi kegagalan, dan mengotomatisasi respons darurat.
+                        </p>
+                    </div>
+
+                    <!-- Kartu 2: Data & AI -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-2xl border-t-4 border-cyan-500 hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                        <h4 class="text-xl font-bold mb-3 text-cyan-400">Analitik Data Besar (Big Data)</h4>
+                        <p class="text-gray-400">
+                            Mengumpulkan data pergerakan populasi (orang), konsumsi energi, dan penggunaan sumber daya untuk optimalisasi tata kota dan perencanaan infrastruktur masa depan.
+                        </p>
+                    </div>
+
+                    <!-- Kartu 3: Digital Twin -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-2xl border-t-4 border-cyan-500 hover:shadow-cyan-500/50 transition duration-300 transform hover:scale-[1.02]">
+                        <h4 class="text-xl font-bold mb-3 text-cyan-400">Digital Twin & BIM</h4>
+                        <p class="text-gray-400">
+                            Membuat model virtual bangunan dan kota secara keseluruhan untuk simulasi, pengujian skenario, dan pelatihan operator tanpa mengganggu lingkungan fisik.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Bagian Proyek (Bangunan & Kota) -->
+        <section id="proyek" class="py-16 md:py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="section-title mb-12 pb-2">
+                <h3 class="text-3xl font-bold">Proyek Pilihan</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Proyek 1: Sistem Lalu Lintas -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-500">
+                    <img src="https://placehold.co/600x400/1e293b/FFFFFF?text=Simulasi+Lalu+Lintas+AI" alt="Proyek Lalu Lintas" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2 text-cyan-400">Optimasi Lalu Lintas Berbasis AI</h4>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Pengembangan model prediksi kemacetan menggunakan data sensor jalan dan algoritma pembelajaran mesin untuk menyesuaikan lampu lalu lintas secara otomatis.
+                        </p>
+                        <span class="inline-block bg-cyan-600/30 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">Python, TensorFlow</span>
+                    </div>
+                </div>
+
+                <!-- Proyek 2: Monitoring Bangunan -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-500">
+                    <img src="https://placehold.co/600x400/1e293b/FFFFFF?text=Monitoring+Gedung+Pencakar+Langit" alt="Proyek Monitoring Gedung" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2 text-cyan-400">Sistem Monitoring Struktur Bangunan</h4>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Aplikasi web untuk memvisualisasikan data integritas struktural (kelembaban, getaran) dari sensor yang tertanam di bangunan bertingkat tinggi.
+                        </p>
+                        <span class="inline-block bg-cyan-600/30 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">React, Node.js, IoT</span>
+                    </div>
+                </div>
+
+                <!-- Proyek 3: Aplikasi Komunitas -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden shadow-2xl hover:shadow-cyan-500/50 transition duration-500">
+                    <img src="https://placehold.co/600x400/1e293b/FFFFFF?text=Aplikasi+Komunitas+Warga" alt="Proyek Komunitas" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2 text-cyan-400">Aplikasi Hub Komunitas Warga Digital</h4>
+                        <p class="text-gray-400 text-sm mb-4">
+                            Platform untuk menghubungkan penduduk kota dengan layanan publik, pelaporan masalah (sampah, lampu mati), dan survei partisipatif.
+                        </p>
+                        <span class="inline-block bg-cyan-600/30 text-cyan-300 text-xs font-semibold px-3 py-1 rounded-full">HTML, CSS, JavaScript, Firebase</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Panggilan Aksi & Kontak -->
+        <section id="kontak" class="py-16 md:py-24 bg-gray-900 border-t border-gray-700">
+            <div class="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+                <h3 class="text-4xl font-extrabold mb-4">Mari Kita Bangun Sesuatu yang Hebat</h3>
+                <p class="text-xl text-gray-300 mb-8">
+                    Tertarik dengan visi saya tentang kota masa depan? Saya terbuka untuk diskusi dan kesempatan kolaborasi.
+                </p>
+                <div class="space-y-4 sm:space-y-0 sm:space-x-6">
+                    <a href="mailto:nama.anda@email.com" class="inline-block px-10 py-3 bg-white text-gray-900 font-bold rounded-full transition duration-300 hover:bg-gray-200 shadow-xl">
+                        Kirim Email
+                    </a>
+                    <a href="#" class="inline-block px-10 py-3 border-2 border-cyan-500 text-cyan-400 font-bold rounded-full transition duration-300 hover:bg-cyan-500 hover:text-white">
+                        Lihat LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 7. Footer -->
+    <footer class="bg-gray-900 border-t border-gray-700 py-6 text-center text-sm text-gray-500">
+        <p>&copy; 2025 [Nama Anda]. Dibuat dengan semangat Inovasi dan Arsitektur Digital.</p>
+    </footer>
+
+    <!-- JavaScript untuk Fungsionalitas Menu Mobile -->
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Menutup menu setelah klik (untuk tautan di mobile)
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
+
